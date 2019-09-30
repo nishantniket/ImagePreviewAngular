@@ -1,0 +1,53 @@
+<div class="uk-container" >
+    <div class="uk-grid">
+        <div class="uk-width-1-2">
+             <!-- <img [attr.src]="imageUrl" > -->
+             <angular-cropper #angularCropper [cropperOptions]="config" [imageUrl]="imageUrl"> 
+            </angular-cropper> 
+        </div>
+        <div class="uk-width-1-2">
+            <div class="preview"> 
+                <img [attr.src]="imgUrl"/>
+            </div>
+        </div>
+    </div>
+    <div class="uk-grid">
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons"><span class="fa fa-arrows"></span></div>
+            <div class="uk-button cropper-buttons" (click)="cropImage()"><span class="fa fa-crop"></span></div>
+        </div>
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons" (click)="zoomImage()"><span class="fa fa-search-plus"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-search-minus"></span></div>
+        </div>
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons"><span class="fa fa-arrow-left"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-arrow-right"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-arrow-up"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-arrow-down"></span></div>
+        </div>
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons"><span class="fa fa-rotate-left"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-rotate-right"></span></div>
+        </div>
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons"><span class="fa fa-arrows-h"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-arrows-v"></span></div>
+        </div>
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons"><span class="fa fa-check"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-remove"></span></div>
+        </div>
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons"><span class="fa fa-lock"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-unlock"></span></div>
+        </div>
+        <div class="uk-button-group uk-background-muted">
+            <div class="uk-button cropper-buttons"><span class="fa fa-refresh"></span></div>
+            <div class="uk-button cropper-buttons"><span class="fa fa-upload"></span></div>
+        </div>
+    </div>
+</div>
+<div>
+    
+</div>
