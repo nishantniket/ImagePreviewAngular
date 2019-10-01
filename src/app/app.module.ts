@@ -6,12 +6,14 @@ import { ImageCropperComponent } from './image-cropper/image-cropper.component';
 import { UploadFormComponent } from './upload-form/upload-form.component';
 import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 import { AngularCropperjsModule } from 'angular-cropperjs';
+import { ProfileImageCropperComponent } from './profile-image-cropper/profile-image-cropper.component';
 @NgModule({
   declarations: [
     AppComponent,
     ImageCropperComponent,
     UploadFormComponent,
-    FileUploaderComponent
+    FileUploaderComponent,
+    ProfileImageCropperComponent
   ],
   imports: [
     BrowserModule,

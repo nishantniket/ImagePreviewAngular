@@ -2,12 +2,12 @@
     <div class="uk-grid">
         <div class="uk-width-1-2">
              <!-- <img [attr.src]="imageUrl" > -->
-             <angular-cropper #angularCropper [cropperOptions]="config" [imageUrl]="imageUrl"> 
+             <angular-cropper #angularCropper [cropperOptions]="config" [imageUrl]="data && data.image ? data.image :'./../../assets/airplaneTest.png'"> 
             </angular-cropper> 
         </div>
         <div class="uk-width-1-2">
             <div class="preview"> 
-                <img [attr.src]="imgUrl"/>
+                <img [attr.src]="data && data.image ? data.image :'./../../assets/airplaneTest.png'"/>
             </div>
         </div>
     </div>

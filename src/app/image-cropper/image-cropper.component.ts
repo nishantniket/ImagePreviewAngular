@@ -11,6 +11,7 @@ export class ImageCropperComponent implements OnInit {
 //http://www.gstatic.com/webp/gallery/1.jpg
   //imageUrl = 'http://homepages.cae.wisc.edu/~ece533/images/airplane.png';
   imageUrl = './../../assets/airplaneTest.png';
+  data: any;
   config = {
     aspectRatio : 16/9,
     dragMode : 'move',
@@ -28,21 +29,23 @@ export class ImageCropperComponent implements OnInit {
   imgUrl: string;
   constructor() {
     this.imageUrl = './../../assets/images/airplaneTest.png';
+    this.data = {};
    }
 
   ngOnInit() {
     // this.imgUrl = this.angularCropper.cropper.getCroppedCanvas().toDataURL('image/jpeg');
+    this.data.image = './../../assets/images/airplaneTest.png';
     };
     cropMoved(data){
       // this.imgUrl = this.angularCropper.cropper.getCroppedCanvas().toDataURL('image/jpeg');
     }
     cropImage(data) {
-      this.imgUrl = this.angularCropper.cropper.getCroppedCanvas().toDataURL('image/jpeg');
+      this.data.image = this.angularCropper.cropper.getCroppedCanvas().toDataURL('image/jpeg');
 
     }
     zoomImage() {
       this.angularCropper.cropper.zoom(0.1);
-      this.imgUrl = this.angularCropper.cropper.getCroppedCanvas().toDataURL('image/jpeg');
+      this.data.image = this.angularCropper.cropper.getCroppedCanvas().toDataURL('image/jpeg');
       
     }
 }
